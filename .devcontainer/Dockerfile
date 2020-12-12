@@ -17,9 +17,6 @@ RUN sudo ln -s ~/.local/bin/conan /usr/bin/conan
 # Enviroment variables ///@TODO: Make them permanent
 RUN CC=clang CXX=clang++
 
-
-RUN CC=clang CXX=clang++
-
 # # Copy the current folder which contains C++ source code to the Docker image under /usr/src
 # COPY . /app
 
