@@ -50,6 +50,8 @@ if(ENABLE_PCH)
     project_options
     INTERFACE
     <vector>
+    <functional>
+    <iostream>
     <string>
     <map>
     <utility>)
