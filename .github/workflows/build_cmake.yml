@@ -29,6 +29,11 @@ jobs:
         python3 -m pip install conan
         source ~/.profile
 
+    - name: Install cppcheck and clang-tidy
+      shell: bash
+      run: |
+        apt-get -y install clang-tidy cppcheck
+
     - name: Configure CMake
       # Use a bash shell so we can use the same syntax for environment variable
       # access regardless of the host operating system
