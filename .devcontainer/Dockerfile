@@ -8,10 +8,10 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends clang clang-tidy cmake doxygen graphviz ccache cppcheck python3-pip
 
 
-RUN pip3 install --user conan
+RUN pip3 install conan
 
 # Create a symbolic link since conan wasnt installed system wise
-RUN sudo ln -s ~/.local/bin/conan /usr/bin/conan
+# RUN sudo ln -s ~/.local/bin/conan /usr/bin/conan
 
 
 # Enviroment variables ///@TODO: Make them permanent
