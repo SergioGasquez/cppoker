@@ -9,22 +9,3 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 
 
 RUN pip3 install conan
-
-# Create a symbolic link since conan wasnt installed system wise
-# RUN sudo ln -s ~/.local/bin/conan /usr/bin/conan
-
-
-# Enviroment variables ///@TODO: Make them permanent
-RUN CC=clang CXX=clang++
-
-# # Copy the current folder which contains C++ source code to the Docker image under /usr/src
-# COPY . /app
-
-# # Specify the working directory
-# WORKDIR /app
-
-# # Use Clang to compile the Test.cpp source file
-# RUN clang++ -o Test main.cpp
-
-# # Run the output program from the previous step
-# CMD ["./Test"]
