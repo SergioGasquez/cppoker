@@ -1,25 +1,29 @@
-#include <spdlog/spdlog.h>
+/**
+ * @file main.cpp
+ * @brief Class declaration for ClassTest class
+ * 
+ * Simple class test
+ *  
+ * @author Sergio Gasquez Arcos (sergio.gasquez@gmail.es)
+ * @version 1.0 Initial release
+ * @date 2020-12-13
+ * 
+ * @copyright Copyright (c) 2020
+ * 
+ */
 
+#include <spdlog/spdlog.h>
+#include "ClassTest/ClassTest.h"
+
+/**
+ * @brief Main 
+ * 
+ * @return int 
+ */
 int main()
 {
-  const int N = 5;
-
-  //Use the default logger (stdout, multi-threaded, colored)
-  // std::vector<int> test = { 2, 2, 2, 2 };
-  int arr[] = { 2, 2, 2, 2, 2 };
-  for (int i = 0; i <= N; i++)
-  {
-    fmt::print("{}\n", int(85));
-  }
-
-  std::vector<int> v;
-  v.push_back(1);
-  v.push_back(2);
-  v.push_back(3);
-  for (int i = 0; i < v.size(); ++i)
-  {
-    fmt::print("{}\n", v[i]);
-  }
+  uint8_t test = 4;
+  ClassTest myclass(test);
   spdlog::info("Hello, {}!", "World");
 
   fmt::print("Hello, from {}\n", "{fmt}");
